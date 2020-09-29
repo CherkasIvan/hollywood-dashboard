@@ -1,0 +1,81 @@
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    height: 100vh;
+    background-color: #fc6863;
+
+    @include md {
+        display: none;
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 70px;
+        min-height: 70px;
+        padding-bottom: 10px;
+        font-size: 11px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__link:first-child {
+        align-items: center;
+        font-family: 'Lobster', cursive;
+        font-size: 40px;
+        color: #fc6863;
+        background-color: #fff;
+    }
+
+    &__link:last-child {
+        margin-top: auto;
+        background: url(../img/nav/power-button.png) no-repeat center;
+    }
+
+    &__link--home {
+        background: url(../img/nav/home.png) no-repeat center 20px;
+    }
+
+    &__link--statistics {
+        background: url(../img/nav/bar-chart.png) no-repeat center 20px;
+    }
+
+    &__link--users {
+        background: url(../img/nav/user.png) no-repeat center 20px;
+    }
+
+    &__link--settings {
+        background: url(../img/nav/settings.png) no-repeat center 20px;
+    }
+
+    &__link--information {
+        background: url(../img/nav/information.png) no-repeat center 20px;
+    }
+
+    &__link:first-child:hover {
+        background-color: wheat;
+        box-shadow: 5px -1px 5px  #888;
+    }
+
+    &__link:hover {
+        background-color: #f16863;
+        box-shadow: 5px -0px 5px  #C9BC79;
+
+        &:nth-child(1n + 2):after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 70px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid #fc6863;
+        }
+    }
+}

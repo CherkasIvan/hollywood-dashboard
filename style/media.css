@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px){
+    .header__nav{
+        display: none;
+    }
+    .gamburger {
+        display: block;
+    }
+}

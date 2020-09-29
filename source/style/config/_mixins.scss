@@ -1,0 +1,46 @@
+// Small devices
+@mixin sm {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (max-width: #{$screen-lg-max}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl {
+    @media (max-width: #{$screen-xl-max}) {
+        @content;
+    }
+}
+
+// CSS Flexible Box Layout Module
+// ---------------*
+
+@mixin flex-direction($axis-x, $axis-y, $direction, $wrap) {
+    display: flex;
+    justify-content: $axis-x;
+    align-items: $axis-y;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+// Typography
+// ---------------*
+@mixin primary-title {
+    font-size: $primary-title-fz;
+    color: $primary-title-color;
+    font-weight: $primary-title-wieght;
+}

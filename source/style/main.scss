@@ -1,0 +1,43 @@
+@import "./config/reset";
+@import "./config/variables";
+@import "./config/mixins";
+
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/main";
+@import "./components/aside";
+@import "./components/footer";
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 70px;
+
+    @include md{
+        margin-left: 0;
+    }
+}
+
+.container--inner {
+    width: 100%;
+    max-width: 271px;
+    height: 841px;
+
+    @media screen and (max-width: 590px) {
+        min-width: 100%;
+    }
+}
+
+@import "./config/media";

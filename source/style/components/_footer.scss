@@ -1,0 +1,58 @@
+.footer {
+    @include flex-direction(space-around, center, column, wrap);
+    height: 229px;
+
+    &__title {
+        @include primary-title;
+        
+    }
+
+    &__list {
+        @include flex-direction(center, center , row, wrap);
+        
+    }
+
+    &__item {
+        height: 55px;
+        width: 55px;
+        margin: 6.5px;
+        border-radius: 15px;
+        
+    }
+
+    &__link {
+        @include flex-direction(center,center, row, nowrap);
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+   
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    &__link--rdio{
+        background: linear-gradient(to bottom right, #885294, #5A4679);
+        box-shadow: 0 0 2px 2px#885294;
+    }
+    &__link--css3{
+        background: linear-gradient(to bottom right, #46C5A5, #41A6A5);  
+        box-shadow: 0 0 2px 2px #46C5A5; 
+    }
+    &__link--deviantart{
+        background: linear-gradient(to bottom right, #EEAF94, #B37079);  
+        box-shadow: 0 0 2px 2px #EEAF94 
+    }
+    &__link--xing{
+        background: linear-gradient(to bottom right, #607CBD, #6E4C98);   
+        box-shadow: 0 0 2px 2px #607CBD;
+    }
+    &__link--vk{
+        background: linear-gradient(to bottom right, #FBD88D, #F59383); 
+        box-shadow: 0 0 2px 2px #FBD88D;  
+    }
+    &__link--vimeo{
+        background: linear-gradient(to bottom right,#31C1DF,#528EE7); 
+        box-shadow: 0 0 2px 2px #31C1DF;  
+    }
+}
