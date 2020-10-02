@@ -25,7 +25,11 @@
         @content;
     }
 }
-
+@mixin xxl {
+    @media (max-width: #{$screen-xxl-max}) {
+        @content;
+    }
+}
 // CSS Flexible Box Layout Module
 // ---------------*
 
@@ -43,4 +47,23 @@
     font-size: $primary-title-fz;
     color: $primary-title-color;
     font-weight: $primary-title-wieght;
+}
+
+@mixin hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+@mixin cub {
+    width: 70px;
+    height: 71px;
+    border-right: 2px solid #f1f1f1;
+    margin: 0;
+}
+
+@mixin gradient_text {
+    background: linear-gradient(0deg, #fd5272 0%, #f77359 100%) #fd5272;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #f77359;
 }

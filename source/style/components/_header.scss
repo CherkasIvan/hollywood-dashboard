@@ -2,5 +2,202 @@
     width: 100%;
     min-width: 320px;
     height: 169px;
-    background-color: yellow;
+    color: #c8c8c8;
+
+}
+
+.header-top {
+    @include flex-direction(start, center, row, nowrap);
+    margin: 0;
+    height: 71px;
+    border-bottom: 2px solid #f1f1f1;
+
+    &__person--more {
+        width: 5px;
+        height: 18px;
+        margin-left: 1em;
+        margin-right: 1em;
+        background: url(../img/header/more_user.png) no-repeat center;
+    }
+
+    &__navigation--more {
+        @include cub;
+        border-left: 2px solid #f1f1f1;
+        background: url(../img/header/more.png) no-repeat center;
+    }
+
+    &__navigation--folders {
+        @include cub;
+        background: url(../img/header/folder.png) no-repeat center;
+    }
+
+    &__navigation--setings {
+        @include cub;
+        background: url(../img/header/settings.png) no-repeat center;
+    }
+
+    &__navigation--upload {
+        @include cub;
+        border-left: 2px solid #f1f1f1;
+
+        @include md {
+            border-left: none;
+        }
+
+        background: url(../img/header/upload.png) no-repeat center;
+    }
+
+    &__navigation--email {
+        @include cub;
+        background: url(../img/header/envelope.png) no-repeat center;
+    }
+
+    &__navigation--ethernet {
+        @include cub;
+        border: none;
+        background: url(../img/header/planet-earth.png) no-repeat center;
+
+    }
+
+    &__search {
+        @include flex-direction(space-between, center, row, nowrap);
+
+        @include md {
+            display: none;
+        }
+
+        width: 299px;
+        height: 34px;
+        padding: 10px 10px 10px 10px;
+        margin: auto;
+        border: 1px solid #f1f1f1;
+        border-radius: 25px;
+        background-color: #F8F8F8;
+    }
+
+    &__search-btn {
+        width: 1.5em;
+        height: 1.5em;
+        margin-left: 1.5em;
+        border: none;
+        background: url(../img/aside/search.png) no-repeat center;
+
+        &:hover {
+            @include hover;
+        }
+    }
+
+    &__edit-btn {
+        width: 1.5em;
+        height: 1.5em;
+        border: none;
+        background: url(../img/aside/edit.png) no-repeat center;
+
+        &:hover {
+            @include hover;
+        }
+    }
+
+    &__input-search {
+        border: none;
+        background-color: #F8F8F8;
+
+        &::placeholder {
+
+            font-family: 'Lato', cursive;
+            font-size: 10px;
+            color: #C0C0C0;
+
+        }
+    }
+
+    &__person--name {
+        font-size: 13px bold;
+        font-family: 'Lato', cursive;
+        @include gradient_text;
+        padding-bottom: 5px;
+    }
+
+    &__person--text {
+        font-size: 9px;
+        font-family: 'Lato', cursive;
+        color: #BFBFBF;
+    }
+
+    &__person--block {
+        position: relative;
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-left: 18px;
+
+
+    }
+
+}
+
+// Header-bottom
+
+.header-bottom {
+    @include md {
+        display: none;
+    }
+
+    @include flex-direction(space-around, center, row, nowrap);
+    margin: 0 auto;
+    margin-top: 19px;
+
+    &__stactics {
+        @include flex-direction(space-around, center, row, wrap);
+        width: 120px;
+
+    }
+
+    &__stactics--name {
+        font-size: 12px bold;
+        font-family: 'Lato', cursive;
+        color: #777777;
+        padding-bottom: 9px;
+    }
+
+    &__stactics--text {
+        @include gradient_text;
+        padding-bottom: 9px;
+    }
+
+    &__stactics-block {
+
+        width: 70px;
+        font-size: 8px;
+        color: #BFBFBF;
+        @include flex-direction(space-around, center, row, nowrap);
+
+    }
+
+    &__stactics--numeral-top {
+        position: relative;
+    }
+
+    &__stactics--numeral-top::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        bottom: 0;
+        border: 4px solid transparent;
+        border-bottom: 6px solid #A889E9;
+    }
+
+    &__stactics--numeral-bot {
+        position: relative;
+    }
+
+    &__stactics--numeral-bot::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        bottom: -3px;
+        border: 4px solid transparent;
+        border-top: 6px solid #FD5670;
+    }
 }

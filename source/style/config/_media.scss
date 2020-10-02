@@ -1,0 +1,39 @@
+@media (max-width: 280px) {
+  .aside__nav {
+    @include flex-direction(center, center, row, nowrap);
+  }
+
+  .aside__search {
+    @include flex-direction(center, center, row, nowrap);
+  }
+}
+
+@media (max-width: 320px) {
+  .aside__nav {
+    @include flex-direction(space-between, center, row, nowrap);
+  }
+
+  .aside__search {
+    @include flex-direction(center, center, row, nowrap);
+  }
+
+  .header {
+    height: 71px;
+  }
+}
+
+@media (max-width: 576px) {
+  .aside__nav {
+    @include flex-direction(space-between, center, row, nowrap);
+  }
+
+  .aside__search {
+    @include flex-direction(center, center, row, nowrap);
+
+  }
+
+  .header {
+    height: 71px;
+  }
+}
+

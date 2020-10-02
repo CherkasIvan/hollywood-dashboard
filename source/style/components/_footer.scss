@@ -1,7 +1,7 @@
 .footer {
     @include flex-direction(space-around, center, column, wrap);
     height: 229px;
-
+    margin-top: 1.5em;
     &__title {
         @include primary-title;
         
@@ -26,9 +26,8 @@
         width: 100%;
         border-radius: 15px;
    
-
         &:hover {
-            transform: scale(1.2);
+            @include hover;
         }
     }
     &__link--rdio{

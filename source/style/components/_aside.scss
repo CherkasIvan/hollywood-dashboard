@@ -6,10 +6,8 @@
         display: flex;
         justify-content: center;
         flex-direction: row;
-        width: 90px;
-        min-height: 48px;
-        padding-bottom: 20px;
-  
+        width: 91px;
+        height: 50px;
         text-decoration: none;
     }
 
@@ -24,6 +22,124 @@
     &__link--like {
         background: url(../img/aside/like.png) no-repeat center 20px;
     }
+
+    &__link:hover {
+        background-color: #C53E5B;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 47px;
+            left: 40px;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-top: 10px solid #C53E5B;
+        }
+    }
+
+    &__stars {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__person {
+        margin-left: 21px;
+        margin-right: 20px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+
+    }
+
+    &__person:not(:last-child) {
+        padding-bottom: 19px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+
+    &__person--name {
+        font-size: 13px bold;
+        font-family: 'Lato', cursive;
+        color: #777777;
+        padding-bottom: 5px;
+    }
+
+    &__person--text {
+        font-size: 9px;
+        font-family: 'Lato', cursive;
+        color: #BFBFBF;
+    }
+
+    &__person--block {
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+
+    }
+
+    &__person--send {
+
+        width: 20px;
+        height: 16px;
+        background: url(../img/aside/stars/chat_copy.png) no-repeat center;
+
+        &:hover {
+            @include hover;
+        }
+    }
+
+    &__search {
+        @include flex-direction(space-around, center, row, nowrap);
+        padding: 17px 15px 15px;
+        border-top: 1px solid #f1f1f1;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #f1f1f1;
+
+    }
+
+    &__search-btn {
+        width: 1.5em;
+        height: 1.5em;
+        margin-left: 1.5em;
+        border: none;
+        background: url(../img/aside/search.png) no-repeat center;
+
+        &:hover {
+            @include hover;
+        }
+    }
+
+    &__edit-btn {
+        width: 1.5em;
+        height: 1.5em;
+        border: none;
+        background: url(../img/aside/edit.png) no-repeat center;
+
+        &:hover {
+            @include hover;
+        }
+    }
+
+    &__input-search {
+        width: 149px;
+
+        border: none;
+        border-bottom: 1px solid #f1f1f1;
+
+        &::placeholder {
+            font-family: 'Lato', cursive;
+            font-size: 10px;
+            color: #C0C0C0;
+
+        }
+    }
 }
 
 .aside__nav {
@@ -31,7 +147,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    width: 488px;
+    min-width: 320px;
     height: 50px;
-    background-color: #fc6863;
+    background: linear-gradient(to right, #F65969, #FC7858);
 }

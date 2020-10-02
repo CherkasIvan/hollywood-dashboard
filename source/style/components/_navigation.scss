@@ -59,12 +59,12 @@
 
     &__link:first-child:hover {
         background-color: wheat;
-        box-shadow: 5px -1px 5px  #888;
+        box-shadow: 5px -1px 5px #888;
     }
 
     &__link:hover {
         background-color: #f16863;
-        box-shadow: 5px -0px 5px  #C9BC79;
+        box-shadow: 5px -0px 5px #C9BC79;
 
         &:nth-child(1n + 2):after {
             content: "";
