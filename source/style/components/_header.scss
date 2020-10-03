@@ -112,7 +112,8 @@
     }
 
     &__person--name {
-        font-size: 13px bold;
+        font-size: 13px;
+        font-weight: bold;
         font-family: 'Lato', cursive;
         @include gradient_text;
         padding-bottom: 5px;
@@ -120,6 +121,7 @@
 
     &__person--text {
         font-size: 9px;
+        font-weight: bold;
         font-family: 'Lato', cursive;
         color: #BFBFBF;
     }
@@ -131,7 +133,6 @@
         flex-direction: column;
         align-items: left;
         padding-left: 18px;
-
 
     }
 
@@ -149,13 +150,13 @@
     margin-top: 19px;
 
     &__stactics {
-        @include flex-direction(space-around, center, row, wrap);
+        @include flex-direction(space-around, center, column, wrap);
         width: 120px;
-
     }
 
     &__stactics--name {
-        font-size: 12px bold;
+        font-size: 12px;
+        font-weight: bold;
         font-family: 'Lato', cursive;
         color: #777777;
         padding-bottom: 9px;

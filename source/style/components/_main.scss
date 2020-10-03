@@ -2,6 +2,248 @@
     flex: auto;
     min-width: 320px;
     max-width: 939px;
-    height: 841px;
-    background-color: rgb(5, 87, 26);
+    min-height: 841px;
+    background-color: #ECECEC;
+}
+
+.main-top {
+    @include flex-direction(space-around, center, row, nowrap);
+}
+.main__diagramm{
+    @include flex-direction(space-around, center, column, nowrap);
+    width: 704px;
+    height: 266px;
+    background-color: #FFFFFF;
+}
+// revenue
+.main__revenue {
+    @include flex-direction(space-around, center, column, nowrap);
+    min-width: 264px;
+    height: 266px;
+
+    background-color: #FFFFFF;
+
+    &--title {
+        @include flex-direction(center, center, row, nowrap);
+        font-family: 'Lato', cursive;
+        font-size: 14px;
+        font-weight: bold;
+        color: #777777;
+    }
+
+    &--img {
+        min-height: 130px;
+        min-width: 130px;
+        background: url(../img/main/revenue-per-hour.png) no-repeat center;
+    }
+
+    &--list {
+        @include flex-direction(space-between, center, row, nowrap);
+        position: relative;
+        min-width: 50px;
+        font-weight: bold;
+        font-size: 8px;
+        color: #BFBFBF;
+
+    }
+
+    &--list::before {
+        content: '';
+        position: absolute;
+        left: -9px;
+        bottom: 0;
+        border: 4px solid transparent;
+        border-bottom: 6px solid #A889E9;
+    }
+
+
+    &--list::after {
+        content: '';
+        position: absolute;
+        left: 22px;
+        bottom: -3px;
+        border: 4px solid transparent;
+        border-top: 6px solid #FD5670;
+    }
+}
+
+.main-bot {
+    @include flex-direction(space-around, center, row, wrap);
+    
+}
+.main__task{
+    @include flex-direction(space-around, center, column, wrap);
+    width: 501px;
+    height: 245px;
+    background-color: #FFFFFF;
+}
+.main__feed {
+    @include flex-direction(space-around, start, column, wrap);
+    max-width: 467px;
+    height: 508px;
+
+    background-color: #FFFFFF;
+
+    &--title {
+
+        font-family: 'Lato', cursive;
+        font-size: 14px;
+        font-weight: bold;
+        color: #777777;
+    }
+
+    &--title {
+        font-family: 'Lato', cursive;
+        font-size: 14px;
+        color: #777777;
+    }
+
+    &--time {
+        font-family: 'Lato', cursive;
+        font-size: 8px;
+        margin-top: 13px;
+        color: #979796;
+    }
+
+    &--field {
+        @include flex-direction(center, center, row, wrap);
+        width: 345px;
+        min-height: 84px;
+        background-color: #FCFCFC;
+        border: 1px solid #F1F1F1;
+        margin-left: 6%;
+    }
+
+    &--field p {
+        font-family: 'Lato', cursive;
+        font-size: 12px;
+        color: #BFBFBF;
+        padding-left: 6%;
+    }
+
+    &--block {
+        @include flex-direction(space-around, center, row, nowrap);
+
+        &-person {
+            @include flex-direction(space-around, center, column, wrap);
+        }
+    }
+
+}
+
+.main__progress {
+    @include flex-direction(space-around, center, column, nowrap);
+    min-width: 241px;
+    height: 245px;
+    background-color: #FFFFFF;
+
+    &--title {
+
+        font-family: 'Lato', cursive;
+        font-size: 14px;
+        font-weight: bold;
+        color: #777777;
+    }
+
+    &--price {
+        font-family: 'Lato', cursive;
+        font-size: 20px;
+        font-weight: bold;
+        @include gradient_text_main;
+    }
+
+    &--img {
+        min-height: 130px;
+        min-width: 130px;
+        background: url(../img/main/progress.png) no-repeat center;
+    }
+
+    &--list {
+        @include flex-direction(space-between, center, row, nowrap);
+        position: relative;
+        min-width: 50px;
+        font-size: 8px;
+        font-weight: bold;
+        color: #BFBFBF;
+
+    }
+
+    &--list::before {
+        content: '';
+        position: absolute;
+        left: -9px;
+        bottom: 0;
+        border: 4px solid transparent;
+        border-bottom: 6px solid #A889E9;
+    }
+
+
+    &--list::after {
+        content: '';
+        position: absolute;
+        left: 22px;
+        bottom: -3px;
+        border: 4px solid transparent;
+        border-top: 6px solid #FD5670;
+    }
+}
+
+.main__shipments {
+    @include flex-direction(space-around, center, column, nowrap);
+    min-width: 241px;
+    height: 245px;
+    background-color: #FFFFFF;
+
+    &--block {
+        width: 60%;
+        @include flex-direction(space-between, center, row, nowrap);
+    }
+
+    &--title {
+        @include flex-direction(center, center, row, nowrap);
+        font-family: 'Lato', cursive;
+        font-size: 14px;
+        font-weight: bold;
+        color: #777777;
+    }
+
+    &--price {
+        font-family: 'Lato', cursive;
+        font-size: 20px;
+        font-weight: bold;
+        @include gradient_text;
+    }
+
+    &--img {
+        min-height: 115px;
+        min-width: 187px;
+        background: url(../img/main/shipments.png) no-repeat center;
+    }
+
+    &--list {
+        @include flex-direction(space-between, center, row, nowrap);
+        position: relative;
+        min-width: 50px;
+        font-size: 8px;
+        font-weight: bold;
+        color: #BFBFBF;
+    }
+
+    &--list::before {
+        content: '';
+        position: absolute;
+        left: -9px;
+        bottom: 0;
+        border: 4px solid transparent;
+        border-bottom: 6px solid #A889E9;
+    }
+
+    &--list::after {
+        content: '';
+        position: absolute;
+        left: 22px;
+        bottom: -3px;
+        border: 4px solid transparent;
+        border-top: 6px solid #FD5670;
+    }
 }
