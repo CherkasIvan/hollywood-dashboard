@@ -1,4 +1,6 @@
 README.md
+
+https://cherkasivan.github.io/hollywood-dashboard/
 Hollywood-dashboard
 
 Верстаем макет.
