@@ -20,8 +20,7 @@
 
 .main__diagramm {
     @include flex-direction(space-around, center, column, nowrap);
-    min-width: 650px;
-    max-width: 704px;
+    width: 704px;
     height: 266px;
     background-color: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);

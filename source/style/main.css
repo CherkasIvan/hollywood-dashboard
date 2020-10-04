@@ -939,8 +939,7 @@ textarea {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  min-width: 650px;
-  max-width: 704px;
+  width: 704px;
   height: 266px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
