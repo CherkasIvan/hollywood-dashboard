@@ -1,27 +1,39 @@
 .main {
     flex: auto;
+    padding: 19px;
     min-width: 320px;
-    max-width: 939px;
+    max-width: 993px;
     min-height: 841px;
     background-color: #ECECEC;
+
+}
+
+.main__block-right--bot {
+    @include flex-direction(space-between, center, row, wrap);
 }
 
 .main-top {
-    @include flex-direction(space-around, center, row, nowrap);
+    @include flex-direction(space-between, center, row, wrap);
+    margin-bottom: 19px;
+
 }
-.main__diagramm{
+
+.main__diagramm {
     @include flex-direction(space-around, center, column, nowrap);
-    width: 704px;
+    min-width: 650px;
+    max-width: 704px;
     height: 266px;
     background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 // revenue
 .main__revenue {
     @include flex-direction(space-around, center, column, nowrap);
     min-width: 264px;
     height: 266px;
-
     background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
     &--title {
         @include flex-direction(center, center, row, nowrap);
@@ -68,33 +80,140 @@
 }
 
 .main-bot {
-    @include flex-direction(space-around, center, row, wrap);
+    @include flex-direction(space-between, space-evenly, row, wrap);
     
 }
-.main__task{
-    @include flex-direction(space-around, center, column, wrap);
+
+.main__task {
+    @include flex-direction(space-between, flex-start, column, wrap);
     width: 501px;
     height: 245px;
+    padding: 20px;
+    margin-bottom: 19px;
     background-color: #FFFFFF;
-}
-.main__feed {
-    @include flex-direction(space-around, start, column, wrap);
-    max-width: 467px;
-    height: 508px;
-
-    background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
     &--title {
-
+        margin-bottom: 5px;
+        padding-left: 10px;
         font-family: 'Lato', cursive;
         font-size: 14px;
         font-weight: bold;
         color: #777777;
+
     }
 
+    &--desc {
+        @include gradient_text;
+        font-family: 'Lato', cursive;
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 30px;
+    }
+
+    &--text {
+
+        font-family: 'Lato', cursive;
+        font-size: 12px;
+        color: #BFBFBF;
+        margin-right: 30px;
+    }
+
+    &--clock {
+        font-family: 'Lato', cursive;
+        font-size: 12px;
+        color: #BFBFBF;
+
+    }
+
+    &--list {
+        @include flex-direction(space-between, flex-start, column, nowrap);
+        margin: auto auto;
+    }
+
+    &--item {
+        @include flex-direction(space-around, flex-end, row, nowrap);
+        width: 441px;
+        border-top: 1px solid #EDEDED;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:last-child {
+            border-bottom: 1px solid #EDEDED;
+        }
+
+        &:nth-child(even) {
+            background-color: #FCFCFC;
+        }
+    }
+
+    &--radio {
+        margin-right: 12px;
+
+}
+
+    &--send {
+        width: 20px;
+        height: 20px;
+        background: url(../img/main/clock.png) no-repeat center center;
+    }
+
+}
+
+input[type='checkbox'],
+label {
+  cursor: pointer;
+}
+input[type='checkbox'] {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+  
+  input[type='checkbox']::before {
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #ECECEC;
+  }
+  
+  input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    @include gradient;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+  }
+
+
+.main__feed {
+    @include flex-direction(center, flex-start, column, wrap);
+    min-width: 467px;
+    height: 508px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
     &--title {
+        @include flex-direction(center, flex-start, column, wrap);
         font-family: 'Lato', cursive;
         font-size: 14px;
+        font-weight: bold;
+        margin-left: 8%;
         color: #777777;
     }
 
@@ -106,7 +225,7 @@
     }
 
     &--field {
-        @include flex-direction(center, center, row, wrap);
+        @include flex-direction(space-between, center, row, wrap);
         width: 345px;
         min-height: 84px;
         background-color: #FCFCFC;
@@ -116,18 +235,40 @@
 
     &--field p {
         font-family: 'Lato', cursive;
+        line-height: 1.5;
         font-size: 12px;
         color: #BFBFBF;
-        padding-left: 6%;
+        padding: 3%;
+    }
+
+    &--field p span {
+        font-family: 'Lato', cursive;
+        font-weight: bold;
+        font-size: 12px;
+        color: #777777;
     }
 
     &--block {
-        @include flex-direction(space-around, center, row, nowrap);
+        @include flex-direction(flex-end, center, row, nowrap);
+        margin: 0 auto;
+
 
         &-person {
-            @include flex-direction(space-around, center, column, wrap);
+            @include flex-direction(center, center, column, wrap);
+        }
+
+        &:nth-child(2) {
+            padding-top: 6%;
         }
     }
+
+    &--line {
+        border-left: 4px solid #F1F1F1;
+        max-width: 316px;
+        margin: 6%;
+        margin-left: 24%;
+    }
+
 
 }
 
@@ -136,6 +277,7 @@
     min-width: 241px;
     height: 245px;
     background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
     &--title {
 
@@ -193,6 +335,7 @@
     min-width: 241px;
     height: 245px;
     background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
     &--block {
         width: 60%;

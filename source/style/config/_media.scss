@@ -1,10 +1,23 @@
 @media (max-width: 280px) {
   .aside__nav {
-    @include flex-direction(center, center, row, nowrap);
+    @include flex-direction(space-between, center, row, nowrap);
   }
 
   .aside__search {
     @include flex-direction(center, center, row, nowrap);
+  }
+
+  .main__diagramm {
+    margin-bottom: 19px;
+  }
+
+  .aside__search {
+    @include flex-direction(center, center, row, nowrap);
+  }
+
+  .main__task {
+    @include flex-direction(space-around, center, column, nowrap);
+
   }
 }
 
@@ -17,8 +30,13 @@
     @include flex-direction(center, center, row, nowrap);
   }
 
-  .header {
-    height: 71px;
+  .main__diagramm {
+    margin-bottom: 19px;
+  }
+
+  .main__task {
+    width: 90%;
+    @include flex-direction(space-around, center, column, nowrap);
   }
 }
 
@@ -29,11 +47,176 @@
 
   .aside__search {
     @include flex-direction(center, center, row, nowrap);
+  }
+
+  .main {
+    @include flex-direction(center, center, column, nowrap);
+    width: 570px;
+  }
+
+  .main__diagramm {
+    margin-bottom: 19px;
+  }
+
+  .main__block-right {
+    @include flex-direction(center, center, column, wrap);
 
   }
 
-  .header {
-    height: 71px;
+  .main-top {
+    @include flex-direction(space-between, center, column, wrap);
+  }
+
+  .main-bot {
+    @include flex-direction(space-between, center, column, wrap);
+    max-width: 501px;
+  }
+
+  .main__block-right--bot {
+    @include flex-direction(center, center, column, wrap);
+  }
+
+  .main__progress {
+
+    margin-bottom: 19px;
+  }
+  .main__feed {
+
+    margin-bottom: 19px;
   }
 }
+@media (max-width: 768px) {
+  .aside__nav {
+    @include flex-direction(space-between, center, row, nowrap);
+  }
 
+  .aside__search {
+    @include flex-direction(center, center, row, nowrap);
+  }
+
+  .main {
+    @include flex-direction(center, center, column, nowrap);
+    width: 570px;
+  }
+
+  .main__diagramm {
+    margin-bottom: 19px;
+  }
+
+  .main__block-right {
+    @include flex-direction(center, center, column, wrap);
+
+  }
+
+  .main-top {
+    @include flex-direction(space-between, center, column, wrap);
+  }
+
+  .main-bot {
+    @include flex-direction(space-between, center, column, wrap);
+    max-width: 501px;
+  }
+
+  .main__block-right--bot {
+    @include flex-direction(center, center, column, wrap);
+  }
+
+  .main__progress {
+
+    margin-bottom: 19px;
+  }
+  .main__feed {
+
+    margin-bottom: 19px;
+  }
+}
+@media (max-width: 992px) {
+  .aside__nav {
+    @include flex-direction(space-between, center, row, nowrap);
+  }
+
+  .aside__search {
+    @include flex-direction(center, center, row, nowrap);
+  }
+
+  .main {
+    @include flex-direction(center, center, column, nowrap);
+    width: 570px;
+  }
+
+  .main__diagramm {
+    margin-bottom: 19px;
+  }
+
+  .main__block-right {
+    @include flex-direction(center, center, column, wrap);
+
+  }
+
+  .main-top {
+    @include flex-direction(space-between, center, column, wrap);
+  }
+
+  .main-bot {
+    @include flex-direction(space-between, center, column, wrap);
+    max-width: 501px;
+  }
+
+  .main__block-right--bot {
+    @include flex-direction(center, center, column, wrap);
+  }
+
+  .main__progress {
+
+    margin-bottom: 19px;
+  }
+  .main__feed {
+
+    margin-bottom: 19px;
+  }
+}
+@media (max-width: 1200px) {
+  .aside__nav {
+    @include flex-direction(space-between, center, row, nowrap);
+  }
+
+  .aside__search {
+    @include flex-direction(center, center, row, nowrap);
+  }
+
+  .main {
+    @include flex-direction(center, center, column, nowrap);
+    width: 570px;
+  }
+
+  .main__diagramm {
+    margin-bottom: 19px;
+  }
+
+  .main__block-right {
+    @include flex-direction(center, center, column, wrap);
+
+  }
+
+  .main-top {
+    @include flex-direction(space-between, center, column, wrap);
+  }
+
+  .main-bot {
+    @include flex-direction(space-between, center, column, wrap);
+    max-width: 501px;
+  }
+
+  .main__block-right--bot {
+    @include flex-direction(center, center, column, wrap);
+  }
+
+  .main__progress {
+
+    margin-bottom: 19px;
+  }
+  .main__feed {
+
+    margin-bottom: 19px;
+  }
+}

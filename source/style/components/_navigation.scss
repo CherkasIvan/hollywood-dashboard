@@ -6,6 +6,7 @@
     width: 70px;
     height: 100vh;
     background-color: #fc6863;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
     @include md {
         display: none;

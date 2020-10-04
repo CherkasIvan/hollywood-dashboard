@@ -141,20 +141,20 @@
 // Header-bottom
 
 .header-bottom {
-    @include md {
-        display: none;
-    }
 
     @include flex-direction(space-around, center, row, nowrap);
     margin: 0 auto;
     margin-top: 19px;
 
+
     &__stactics {
         @include flex-direction(space-around, center, column, wrap);
         width: 120px;
+        
     }
 
     &__stactics--name {
+        @include flex-direction(space-around, center, column, wrap);
         font-size: 12px;
         font-weight: bold;
         font-family: 'Lato', cursive;
